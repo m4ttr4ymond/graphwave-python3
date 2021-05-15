@@ -77,8 +77,8 @@ def clique(start, nb_nodes, nb_to_remove=0, role_start=0, plot=False):
         to_delete = [edge_list[e] for e in lst]
         graph.remove_edges_from(to_delete)
         for e in lst:
-            print edge_list[e][0]
-            print len(roles)
+            print(edge_list[e][0])
+            print(len(roles))
             roles[edge_list[e][0]] += 1
             roles[edge_list[e][1]] += 1
     mapping_graph = {k: (k + start) for k in range(nb_nodes)}

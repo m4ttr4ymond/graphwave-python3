@@ -70,6 +70,6 @@ def saveNet2txt(G, colors=[], name="net", path="plots/"):
     edges = G.edges(data=False)
     edgeList = [["Source", "Target"]] + [[v[0], v[1]] for v in edges]
     np.savetxt(path + name + "_edges.txt", edgeList, fmt='%s %s')
-    print "saved network  edges and nodes to txt file (for Gephi vis)"
+    print("saved network  edges and nodes to txt file (for Gephi vis)")
     return
 

@@ -1,12 +1,20 @@
 '''Set of functions to construct a graph as a combination of
 smaller subgraphs (of aparticular shape, defined in the shapes.py file)
 '''
+
+import sys, os
+sys.path.append('/home/jovyan/docker/src/python/experiments/graphwave/graphwave')
+
 import graphwave
 import math
 import networkx as nx
 import numpy as np
-from shapes import *
-from graphwave.utils.utils import *
+from shapes.shapes import *
+from utils.utils import *
+
+# from inspect import getmembers, isfunction
+# print(getmembers(shapes.shapes, isfunction))
+print(cycle)
 
 
 def build_structure(width_basis, basis_type, list_shapes, start=0,
@@ -76,7 +84,7 @@ def build_structure(width_basis, basis_type, list_shapes, start=0,
         for p in range(add_random_edges):
             src, dest = np.random.choice(nx.number_of_nodes(basis),
                                          2, replace=False)
-            print src, dest
+            print(src, dest)
             basis.add_edges_from([(src, dest)])
     if plot is True: plot_networkx(basis, role_id)
 

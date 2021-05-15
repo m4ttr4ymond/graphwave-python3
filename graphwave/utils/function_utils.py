@@ -3,7 +3,7 @@
 Useful functions for investigating the distribution of the diffusion coefficients
 """
 import copy
-from graph_tools import *
+from graphwave.utils.graph_tools import *
 import numpy as np
 import pandas as pd
 import seaborn as sb
@@ -13,7 +13,7 @@ def h(x, epsilon=10**(-6)):
     if x > epsilon:
         return - (x) * np.log(x)
     elif x < 0:
-        print "error: argument is negative"
+        print("error: argument is negative")
         return np.nan
     else:
         return -(x + epsilon) * np.log(x + epsilon)

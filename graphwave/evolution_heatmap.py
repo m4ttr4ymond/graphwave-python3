@@ -4,7 +4,7 @@ import matplotlib.pyplot as plt
 import networkx as nx 
 import numpy as np
 import pandas as pd
-from utils.graph_tools import *
+from graphwave.utils.graph_tools import *
 
 
 def compute_evolution_heat_diff(node1, mode, list_heat_df1, list_heat_df2,
@@ -52,7 +52,7 @@ def compute_evolution_heat_diff(node1, mode, list_heat_df1, list_heat_df2,
                np.abs(m21[i] - m22[i]) * w2[i]) for i in range(n-1)]
         d=np.sum(area1)
     else:
-        print "distance type not recognized. Switching to auc"
+        print("distance type not recognized. Switching to auc")
         d=np.sum(area1)
     
     return d

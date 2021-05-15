@@ -7,9 +7,7 @@ import scipy as sc
 from sklearn.decomposition import PCA
 from sklearn.preprocessing import StandardScaler
 from sklearn.cluster import KMeans
-import sys, os
 
-sys.path.append('../')
 from characteristic_functions import charac_function, charac_function_multiscale
 from utils.graph_tools import laplacian
 
