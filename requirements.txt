@@ -2,3 +2,4 @@ networkx>=2.1
 igraph>=0.1.11
 biopython>=1.78
 pygsp>=0.5.1
+distances>=1.0.0
