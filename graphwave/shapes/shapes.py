@@ -363,8 +363,8 @@ def plot_networkx(graph, role_labels):
         x_range = np.linspace(0, 1, len(np.unique(role_labels)))
         coloring = {u: cmap(x_range[i]) for i, u in enumerate(np.unique(role_labels))}
         node_color = [coloring[role_labels[i]] for i in range(len(role_labels))]
-        plt.figure()
-        nx.draw_networkx(graph, pos=nx.layout.fruchterman_reingold_layout(graph),
+        plt.figure(figsize=(10,10))
+        nx.draw_networkx(graph, pos=nx.layout.fruchterman_reingold_layout(graph, scale=1),
                          node_color=node_color, cmap='hot')
         plt.show()
         return

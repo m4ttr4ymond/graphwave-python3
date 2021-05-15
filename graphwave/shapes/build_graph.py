@@ -12,11 +12,6 @@ import numpy as np
 from shapes.shapes import *
 from utils.utils import *
 
-# from inspect import getmembers, isfunction
-# print(getmembers(shapes.shapes, isfunction))
-print(cycle)
-
-
 def build_structure(width_basis, basis_type, list_shapes, start=0,
                     rdm_basis_plugins =False, add_random_edges=0,
                     plot=False, savefig=False):
